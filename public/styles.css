@@ -2,14 +2,26 @@ body{
 	
 	font-family: 'Montserrat', sans-serif;
 	margin: 0px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
 
+}
+header{
+	display: inline-block;
+	width: 100%;
 }
 .body{
 	width: 90%;
 	margin: auto;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	top: 150px;
 }
+
 .container {
     width: 100%;
 }
@@ -28,7 +40,11 @@ h2{
 	text-align: center;
 }
 .col-5-img{
-	width: 100%;
+	height: 317px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	display: inline-block;
 }
 .container{
 	margin-bottom: 40px;
@@ -59,6 +75,10 @@ a:hover{
 	text-decoration: none;
 	color: #666666;
 }
+a:active{
+	background-color: white;
+	color: black;
+}
 ._small{
 	font-size: 11px;
 	text-transform: lowercase;
@@ -69,9 +89,17 @@ a:hover{
 	background-color: #005689;
 	height: 120px;
 	z-index: 1000;
+	display: inline-block;
+	width: 100%;
 
 }
 .navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a:active {
     color: #fff;
 }
 .navbar-nav {
@@ -90,4 +118,25 @@ a:hover{
 	background-color: #ccc;
 	margin-bottom: 20px;
 	padding:10px;
+}
+@media only screen and (max-width: 600px) {
+/* define mobile specific styles come here */
+	._subsection_img{
+		width: 50%;
+		float: left;
+		margin: 2px;
+	}
+
+	._subsection_img > img{
+		width: 100%
+	}
+
+	._subsection_title{
+		width: 40%;
+		float: left;
+		margin: 6px;
+	}
+	._subsections {
+    height: 200px;
+}
 }
