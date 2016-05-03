@@ -1,0 +1,92 @@
+<!doctype html>
+	<html ng-app = "articles" ng-controller="myController as controller">
+	<head>
+		<title>API Utilization</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="public/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    	<script src="public/articles.js"></script>
+	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      	<li random-elements = "init()" info="home"><a href="#">Home</a></li> 
+		        <li random-elements = "init()" info="sports"><a href="#">Sports</a></li>
+		        <li random-elements = "init()" info="business"><a href="#">Business</a></li>
+		        <li random-elements = "init()" info="national"><a href="#">National</a></li>                
+		        <li random-elements = "init()" info="politics"><a href="#">Politics</a></li>  
+		        <li random-elements = "init()" info="nyregion"><a href="#">Nyregion</a></li>  
+		        <li random-elements = "init()" info="technology"><a href="#">Technology</a></li>  
+		        <li random-elements = "init()" info="realestate"><a href="#">Real estate</a></li>  
+		        <li random-elements = "init()" info="travel"><a href="#">Travel</a></li>  
+		        <li random-elements = "init()" info="fashion"><a href="#">Fashion</a></li>  
+		       	<li random-elements = "init()" info="arts"><a href="#">Arts</a></li> 
+
+		      </ul>
+		           
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+	</nav>
+	</header>
+	<body>
+	<div class="body">
+	<div id= "title"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h2>{{mainResult.section}}</h2>
+					</div>
+					<div class="col-md-3">
+						<h3><a ng-href="{{mainResult.url}}">{{mainResult.title}}</a></h3>
+						<div>{{mainResult.abstract}}</div>
+						<div class="_small">{{mainResult.byline}}</div>
+					</div>
+					<div class="col-md-5">
+						<div><img ng-src="{{mainResult.multimedia[4].url}}" class="col-5-img"></div>
+					</div> 
+				
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-10">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-3 _subsections" ng-repeat = "x in _subsections">
+										<a ng-href="{{x.url}}" target="_blank">
+											<div style="margin:auto; width: 90%; border-top: 2px solid #00456e">
+												<div style="text-align: center; margin-top:2px;"><img ng-src="{{x.multimedia[2].url}}" style="margin:auto;" height="140"></div>
+												<div width="{{x.multimedia[2].width}}" class="centeralign">{{x.title}}</div>
+												<div class="_small">{{x.byline}}</div>
+												<div class="centeralign subsection">{{x.subsection}}</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>	
+						</div>				
+				</div>
+			</div>
+			<hr/>
+	</div>
+	</body>
+</html>
