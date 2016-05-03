@@ -8,7 +8,7 @@ var app = angular.module('articles', [])
 		       	 		  
 		       	 	      var subdata = [];
 		       	 	      var result = 0;
-		       	 	      $scope._subsections = [];
+		       	 	      $scope._subsections = []; // array to hold subsection articles
 		       	 	      var _subsection_iterator = 0;
 		       	 	      	for(var i = 0; result < data.num_results; result++){
 		       	 	      		subdata.push(result);
