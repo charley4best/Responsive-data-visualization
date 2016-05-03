@@ -4,7 +4,7 @@ Consumes JSON data from The New York Times API, performs data filtering and prod
 see visuals here - http://charliwize.github.io/web/
 
 
-http://blog.visual.ly/data-sources/
-angularjs
-Jquery
-Bootstrap
+http://blog.visual.ly/data-sources/,
+angularjs,
+Jquery,
+Bootstrap,
