@@ -4,8 +4,7 @@ var app = angular.module('articles', [])
 				$http.get('http://api.nytimes.com/svc/topstories/v1/'+value+'.json?api-key=61feada1b5b912e1a54773b22b5eaf60:11:75164318').
 		       	 success(function(data) {
 		       	 		  $scope.mainResult = data.results[1];	
-		       	 		  $scope._mainImage = data.results[0].multimedia[4];
-		       	 		  
+		       	 		  $scope._mainImage = data.results[1].multimedia[4];		       	 		  
 		       	 	      var subdata = [];
 		       	 	      var result = 0;
 		       	 	      $scope._subsections = []; // array to hold subsection articles
