@@ -21,7 +21,6 @@ $(document).ready(function() {
 
 
     $('.nav li a').on('click', function(){
-    $('.btn-navbar').click(); 
-    $('.navbar-toggle').click()
+      $('.collapse').collapse('hide'); 
 });
 });
