@@ -3,7 +3,7 @@ var app = angular.module('articles', [])
 		.controller('myController', function($scope, $http, $location){			
 			$scope.init = function(value){
 				$location.path("/" + value); //set url based on value
-				$http.get('http://api.nytimes.com/svc/topstories/v1/'+value+'.json?api-key=61feada1b5b912e1a54773b22b5eaf60:11:75164318').
+				$http.get('http://api.nytimes.com/svc/topstories/v1/'+value+'.json?api-key=cc343bdaee55f68d97db7a71759a2eea:18:75164318').
 		       	 success(function(data) {
 		       	 		  $scope.mainResult = data.results[1];	
 		       	 		  $scope._mainImage = data.results[1].multimedia[4];		       	 		  
