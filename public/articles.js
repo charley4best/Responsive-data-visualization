@@ -1,6 +1,8 @@
 var app = angular.module('articles', [])
-		.controller('myController', function($scope, $http){			
+
+		.controller('myController', function($scope, $http, $location){			
 			$scope.init = function(value){
+				$location.path("/" + value); //set url based on value
 				$http.get('http://api.nytimes.com/svc/topstories/v1/'+value+'.json?api-key=61feada1b5b912e1a54773b22b5eaf60:11:75164318').
 		       	 success(function(data) {
 		       	 		  $scope.mainResult = data.results[1];	
@@ -13,13 +15,13 @@ var app = angular.module('articles', [])
 		       	 	      		subdata.push(result);
 		       	 	      	}
 		       	 	    	for(var x = 0; _subsection_iterator < subdata.length; _subsection_iterator++)
-		       	 	    	{	
-		       	 	    		//check to see if images for subsection exist then push into array
-		       	 	    		if(data.results[_subsection_iterator].multimedia !== ""){
-		       	 	    		$scope._subsections.push(data.results[_subsection_iterator]);
-		       	 	    		}
+			       	 	    	{	
+			       	 	    		//check to see if images for subsection exist then push into array
+			       	 	    		if(data.results[_subsection_iterator].multimedia !== ""){
+			       	 	    		$scope._subsections.push(data.results[_subsection_iterator]);
+			       	 	    		}
 
-		       	 	    	}
+			       	 	    	}
 		       	 				       	 	      
 		       	 	  }).
 		       	      //check if api call returns null
@@ -36,13 +38,14 @@ var app = angular.module('articles', [])
 				}).directive('randomElements', function() {
 				  return {
 				    link: function(scope, element, attr) {
+				       	element.ready(function() {
+				      	scope.init("home"); // default value on page loads before use selects another category
+				        });
 				      element.on('click', function() {
 				      	scope.init(attr.info); // gets the info attribute value
 				      	//element.css('background-color', 'black');   
-				     });
-				      element.ready(function() {
-				      	scope.init("home"); // default value on page loads before use selects another category
-				     });
+				       });
+				      
 				     //element.css('background-color', '');   
 
 			     }
