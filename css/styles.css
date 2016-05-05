@@ -122,10 +122,17 @@ a:active{
 	margin-top:2px; 
 	overflow: hidden;
 	margin-bottom: 3px;
-	}
+	width: 100%;
+}
+._subsection_img > img {
+	border-radius: 1px;
+	padding: 4px;
+	border: 1px solid #ddd;
+}
 .titles{
 	font-weight: bold;
 }
+
 #title{
 	width: 100%;
 	background-color: #ccc;
@@ -138,9 +145,7 @@ a:active{
 	height: 150px;
 	width: 100%
 }
-._subsection_img{
-	width: 100%;
-}
+
 ._subsection_img,
 .subsection {
   height: auto;
@@ -153,38 +158,38 @@ a:active{
 }
 @media only screen and (max-width: 1000px) {
 /* define mobile specific styles come here */
-.body{
-	width: 100%;
-	margin: auto;
-	text-decoration: none;
-	display: inline-block;
-	position: relative;
-	text-align: left;
-	top: 70px;
+	.body{
+		width: 100%;
+		margin: auto;
+		text-decoration: none;
+		display: inline-block;
+		position: relative;
+		text-align: left;
+		top: 70px;
 }
 
 	.images_container{
 		width: 60%;
 		float: left;
 		margin: 2px;
-	}
-._subsection_img {
-	text-align: center; 
-	margin-top:2px; 
-	overflow: hidden;
-	margin-bottom: 3px;
-	width: 100%;
-	}
+}
+    ._subsection_img {
+		text-align: center; 
+		margin-top:2px; 
+		overflow: hidden;
+		margin-bottom: 3px;
+		width: 100%;
+}
 	._subsection_img > img{
 		height: 145px;
-	}
+}
 
 	._subsection_title{
 		width: 30%;
 		float: left;
 		margin: 6px;
-	}
+}
 	._subsections {
-    height: 200px;
+    	height: 200px;
 }
 }

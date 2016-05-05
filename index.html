@@ -10,10 +10,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 		<script src="js/jq.js"></script>	
     	<script src="js/controller.js"></script>
-
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -27,7 +25,6 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		    </div>
-
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
@@ -50,6 +47,7 @@
 	</nav>
 	<div class="body">
 	<div id= "title"></div>
+		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
@@ -68,6 +66,8 @@
 				
 				</div>
 			</div>
+		</section>
+		<section>
 			<div class="container">
 				<div class="row">
 						<div class="col-md-2"></div>
@@ -82,7 +82,7 @@
 												<div class="subsection">{{x.subsection}}</div>
 											</div>
 												<div class="_subsection_title" width="{{x.multimedia[2].width}}" class="centeralign">
-													<div>{{x.title}}</div>
+													<div class="ellipsis">{{x.title}}</div>
 													<div class="_small">{{x.byline}}</div>
 												</div>
 											</div>
@@ -93,6 +93,7 @@
 						</div>				
 				</div>
 			</div>
+			</section>
 			<hr/>
 	</div>
 	</body>
