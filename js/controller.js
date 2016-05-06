@@ -1,5 +1,6 @@
 var app = angular.module('articles', [])
 
+
 		.controller('myController', function($scope, $http, $location){			
 			$scope.init = function(value){
 				$location.path("/" + value); //set url based on value
